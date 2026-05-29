@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Natalie (Tally) Shea — Product Marketing Portfolio</title>
+  <meta name="description" content="Natalie (Tally) Shea — Product marketing for cloud security and observability. Portfolio of launches, messaging, demos, and enablement." />
+
+  <!-- Open Graph (LinkedIn, Slack, iMessage, Facebook previews) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tshea-source.github.io/portfolio/" />
+  <meta property="og:title" content="Natalie (Tally) Shea — Product Marketing Portfolio" />
+  <meta property="og:description" content="Cloud security PMM. Messaging, launch content, demos, and enablement. Most recently at Sonrai Security." />
+  <meta property="og:image" content="https://tshea-source.github.io/portfolio/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Natalie (Tally) Shea — Product Marketing Portfolio" />
+  <meta name="twitter:description" content="Cloud security PMM. Messaging, launch content, demos, and enablement. Most recently at Sonrai Security." />
+  <meta name="twitter:image" content="https://tshea-source.github.io/portfolio/assets/og-image.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #FAF8F3;
+      --bg-card: #FFFFFF;
+      --bg-dark: #0F1B17;
+      --bg-dark-2: #15241F;
+      --text: #0A0A0A;
+      --muted: #5B5B5B;
+      --border: #E6E2D8;
+      --accent: #0B5D43;
+      --accent-soft: #7FBEA5;
+      --accent-bg: #EEF5F0;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    a { color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    .display { font-family: 'Fraunces', Georgia, 'Times New Roman', serif; font-weight: 400; letter-spacing: -0.02em; line-height: 1.05; }
+    .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; display: inline-block; }
+
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 32px; }
+    section { padding: 96px 0; }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(250, 248, 243, 0.82);
+      backdrop-filter: saturate(180%) blur(14px);
+      -webkit-backdrop-filter: saturate(180%) blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    nav .container { display: flex; align-items: center; justify-content: space-between; padding-top: 18px; padding-bottom: 18px; }
+    nav .brand { font-family: 'Fraunces', serif; font-weight: 500; font-size: 18px; text-decoration: none; }
+    nav .brand em { font-style: italic; font-weight: 400; color: var(--accent); }
+    nav ul { display: flex; gap: 28px; list-style: none; align-items: center; }
+    nav a { text-decoration: none; font-size: 14px; font-weight: 500; color: var(--text); transition: color 0.15s; }
+    nav a:hover { color: var(--accent); }
+    nav .cta { background: var(--text); color: var(--bg); padding: 9px 18px; border-radius: 100px; transition: background 0.15s; }
+    nav .cta:hover { background: var(--accent); color: white; }
+
+    /* HERO */
+    .hero { padding: 112px 0 88px; }
+    .hero-grid { display: grid; grid-template-columns: 1fr 260px; gap: 64px; align-items: center; }
+    .hero h1 { font-family: 'Fraunces', serif; font-weight: 400; font-size: clamp(48px, 7.5vw, 88px); letter-spacing: -0.025em; line-height: 1.02; margin-bottom: 28px; }
+    .hero h1 em { font-style: italic; font-weight: 400; color: var(--accent); }
+    .hero-sub { font-size: 20px; color: var(--muted); max-width: 600px; margin-bottom: 44px; line-height: 1.5; }
+    .hero-stats { display: flex; gap: 56px; flex-wrap: wrap; }
+    .stat .num { font-family: 'Fraunces', serif; font-size: 34px; font-weight: 500; color: var(--accent); letter-spacing: -0.02em; }
+    .stat .label { font-size: 13px; color: var(--muted); margin-top: 2px; text-transform: uppercase; letter-spacing: 0.06em; }
+    .stat.placeholder .num { color: #B8860B; opacity: 0.85; }
+    .stat.placeholder .label { color: #B8860B; font-style: italic; }
+    .hero-photo { aspect-ratio: 1 / 1; border-radius: 50%; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+    .hero-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* SECTION HEADER */
+    .section-head { margin-bottom: 56px; max-width: 740px; }
+    .section-head h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: clamp(32px, 4.5vw, 48px); line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 16px; }
+    .section-head p { font-size: 18px; color: var(--muted); }
+
+    /* ABOUT */
+    .about-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 72px; }
+    .about-text p { font-size: 19px; margin-bottom: 24px; line-height: 1.55; }
+    .about-text p:last-child { margin-bottom: 0; }
+    .about-text em { color: var(--accent); font-style: italic; font-family: 'Fraunces', serif; font-size: 1.02em; }
+    .facts { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 28px; align-self: start; }
+    .fact { padding: 14px 0; border-bottom: 1px solid var(--border); }
+    .fact:first-child { padding-top: 0; }
+    .fact:last-child { padding-bottom: 0; border-bottom: 0; }
+    .fact .k { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 4px; font-weight: 600; }
+    .fact .v { font-weight: 500; font-size: 15px; line-height: 1.4; }
+
+    /* CASE STUDY */
+    .case { background: var(--bg-dark); color: #E8E5DC; border-radius: 20px; padding: 72px 56px; }
+    .case .eyebrow { color: var(--accent-soft); }
+    .case h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: clamp(34px, 5vw, 56px); line-height: 1.05; letter-spacing: -0.02em; color: white; margin-bottom: 24px; }
+    .case h2 em { font-style: italic; color: var(--accent-soft); }
+    .case-summary { font-size: 19px; color: #C8C4B9; max-width: 720px; margin-bottom: 52px; line-height: 1.55; }
+    .case-metrics { display: flex; gap: 72px; flex-wrap: wrap; margin-bottom: 56px; padding-bottom: 52px; border-bottom: 1px solid rgba(255,255,255,0.12); }
+    .case-metric .num { font-family: 'Fraunces', serif; font-size: 48px; font-weight: 500; color: var(--accent-soft); letter-spacing: -0.02em; line-height: 1; }
+    .case-metric .label { font-size: 14px; color: #C8C4B9; margin-top: 8px; max-width: 180px; line-height: 1.35; }
+    .case-metric.placeholder .num { color: #E0B84A; opacity: 0.9; }
+    .case-metric.placeholder .label { font-style: italic; }
+    .phases { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+    .phase .step { font-family: 'Fraunces', serif; font-size: 12px; color: var(--accent-soft); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 14px; font-weight: 500; }
+    .phase h3 { font-size: 18px; font-weight: 500; color: white; margin-bottom: 12px; line-height: 1.3; }
+    .phase p { color: #C8C4B9; font-size: 14px; margin-bottom: 16px; line-height: 1.5; }
+    .phase-links { display: flex; flex-direction: column; gap: 6px; }
+    .phase-links a { color: var(--accent-soft); text-decoration: none; font-size: 13px; font-weight: 500; transition: color 0.15s; }
+    .phase-links a:hover { color: white; }
+    .phase-links a::before { content: '→ '; opacity: 0.6; }
+
+    /* VIDEOS */
+    .videos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .video-card .frame { aspect-ratio: 16/9; background: #000; border-radius: 10px; overflow: hidden; margin-bottom: 16px; border: 1px solid var(--border); position: relative; }
+    .video-card video, .video-card iframe { width: 100%; height: 100%; border: none; display: block; }
+    .yt-lite { cursor: pointer; }
+    .yt-lite .yt-poster { width: 100%; height: 100%; object-fit: cover; display: block; transition: filter 0.2s; }
+    .yt-lite:hover .yt-poster { filter: brightness(0.85); }
+    .yt-lite .yt-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 76px; height: 54px; background: rgba(0,0,0,0.72); border: 0; border-radius: 14px; color: white; cursor: pointer; transition: background 0.2s, transform 0.2s; display: flex; align-items: center; justify-content: center; padding: 0; }
+    .yt-lite:hover .yt-play { background: rgba(220,30,30,0.95); transform: translate(-50%, -50%) scale(1.04); }
+    .yt-lite .yt-play svg { width: 24px; height: 24px; fill: white; margin-left: 3px; }
+    .video-card h3 { font-size: 17px; font-weight: 500; margin-bottom: 6px; }
+    .video-card p { font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+    /* TILES */
+    .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .tile { display: flex; flex-direction: column; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 28px; text-decoration: none; color: inherit; transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease; }
+    .tile:hover { transform: translateY(-2px); border-color: var(--accent); box-shadow: 0 10px 20px rgba(0,0,0,0.04); }
+    .tile .kind { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+    .tile h3 { font-size: 19px; font-weight: 500; margin-bottom: 10px; line-height: 1.25; }
+    .tile p { font-size: 14px; color: var(--muted); line-height: 1.55; flex: 1; margin-bottom: 16px; }
+    .tile .arrow { font-size: 13px; color: var(--accent); font-weight: 600; }
+
+    /* WRITING */
+    .writing-list { display: flex; flex-direction: column; }
+    .writing-item {
+      display: grid; grid-template-columns: 64px 1fr auto;
+      gap: 32px; padding: 28px 0;
+      border-bottom: 1px solid var(--border);
+      text-decoration: none; color: inherit;
+      align-items: baseline;
+      transition: padding 0.2s ease;
+    }
+    .writing-item:first-child { border-top: 1px solid var(--border); }
+    .writing-item:hover { padding-left: 14px; padding-right: 0; }
+    .writing-item:hover h3 { color: var(--accent); }
+    .writing-item .num { font-family: 'Fraunces', serif; color: var(--muted); font-size: 15px; }
+    .writing-item h3 { font-family: 'Fraunces', serif; font-size: clamp(22px, 2.2vw, 26px); font-weight: 400; line-height: 1.2; margin-bottom: 8px; letter-spacing: -0.01em; transition: color 0.15s; }
+    .writing-item p { font-size: 14px; color: var(--muted); line-height: 1.5; max-width: 640px; }
+    .writing-item .meta { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-top: 10px; }
+    .tag { display: inline-block; background: var(--accent-bg); color: var(--accent); border: 1px solid #D8E7DE; padding: 3px 10px; border-radius: 4px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
+    .tag.ghost { background: #F4EDE0; color: #7A5617; border-color: #E5D9BE; }
+
+    /* SCREENSHOT */
+    .screenshot-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 36px; }
+    .screenshot-card + .screenshot-card { margin-top: 28px; }
+    .screenshot-card img { width: 100%; border-radius: 6px; border: 1px solid var(--border); }
+    .screenshot-card .kind { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px; }
+    .screenshot-card .caption { margin-top: 24px; font-size: 15px; color: var(--muted); line-height: 1.5; }
+    .screenshot-card .caption strong { color: var(--text); font-weight: 500; }
+    .tiles + .screenshot-card { margin-top: 36px; }
+
+    /* PITCH DECK */
+    .deck-cover { display: block; margin-bottom: 14px; border-radius: 6px; overflow: hidden; border: 1px solid var(--border); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .deck-cover:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,0.08); }
+    .deck-cover img { width: 100%; display: block; border: none; border-radius: 0; }
+    .deck-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 24px; }
+    .deck-strip a { display: block; border-radius: 4px; overflow: hidden; border: 1px solid var(--border); transition: transform 0.15s ease, border-color 0.15s ease; }
+    .deck-strip a:hover { transform: translateY(-2px); border-color: var(--accent); }
+    .deck-strip img { width: 100%; display: block; border: none; border-radius: 0; }
+    .deck-cta { display: flex; justify-content: center; margin-top: 6px; }
+    .deck-cta a { display: inline-flex; align-items: center; gap: 8px; background: var(--text); color: var(--bg); padding: 12px 24px; border-radius: 100px; text-decoration: none; font-size: 14px; font-weight: 500; transition: background 0.15s; }
+    .deck-cta a:hover { background: var(--accent); color: white; }
+
+    /* PRINCIPLES */
+    .principles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px 56px; }
+    .principle .num { font-family: 'Fraunces', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.12em; margin-bottom: 14px; font-weight: 500; text-transform: uppercase; }
+    .principle h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 26px; margin-bottom: 12px; letter-spacing: -0.015em; line-height: 1.15; }
+    .principle p { color: var(--muted); font-size: 16px; line-height: 1.55; }
+
+    /* TIMELINE */
+    .timeline { position: relative; }
+    .timeline::before { content: ''; position: absolute; left: 98px; top: 14px; bottom: 14px; width: 1px; background: var(--border); }
+    .role { display: grid; grid-template-columns: 96px 1fr; gap: 36px; padding: 20px 0; position: relative; }
+    .role::before { content: ''; position: absolute; left: 94px; top: 30px; width: 9px; height: 9px; background: var(--bg); border: 2px solid var(--accent); border-radius: 50%; }
+    .role .date { font-family: 'Fraunces', serif; color: var(--muted); font-size: 15px; padding-top: 2px; white-space: nowrap; }
+    .role .detail h3 { font-size: 17px; font-weight: 500; }
+    .role .detail .company { color: var(--muted); font-size: 14px; margin-top: 2px; }
+
+    /* CONTACT */
+    .contact-block { background: var(--bg-dark); color: white; border-radius: 20px; padding: 80px 48px; text-align: center; }
+    .contact-block h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: clamp(36px, 5vw, 56px); line-height: 1.05; letter-spacing: -0.02em; color: white; margin-bottom: 20px; }
+    .contact-block h2 em { font-style: italic; color: var(--accent-soft); }
+    .contact-block p { font-size: 19px; color: #C8C4B9; margin-bottom: 40px; max-width: 520px; margin-left: auto; margin-right: auto; line-height: 1.55; }
+    .contact-links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .contact-btn { padding: 13px 24px; background: white; color: var(--bg-dark); border-radius: 100px; text-decoration: none; font-weight: 500; font-size: 14px; transition: transform 0.15s ease; display: inline-flex; align-items: center; gap: 8px; }
+    .contact-btn.outline { background: transparent; border: 1px solid rgba(255,255,255,0.28); color: white; }
+    .contact-btn:hover { transform: translateY(-1px); }
+    .contact-btn.outline:hover { background: rgba(255,255,255,0.06); }
+
+    footer { padding: 36px 0; font-size: 13px; color: var(--muted); text-align: center; border-top: 1px solid var(--border); }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .deck-strip { grid-template-columns: repeat(2, 1fr); }
+      section { padding: 72px 0; }
+      .hero { padding: 72px 0 56px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .hero-photo { max-width: 200px; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .case { padding: 48px 28px; border-radius: 14px; }
+      .phases { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .case-metrics { gap: 32px; }
+      .videos { grid-template-columns: 1fr; }
+      .tiles { grid-template-columns: 1fr; }
+      .writing-item { grid-template-columns: 1fr; gap: 8px; padding: 22px 0; }
+      .writing-item .num { display: none; }
+      .principles { grid-template-columns: 1fr; gap: 36px; }
+      .timeline::before, .role::before { display: none; }
+      .role { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; }
+      .contact-block { padding: 48px 24px; border-radius: 14px; }
+      nav .nav-links { display: none; }
+      nav ul.compact-nav { display: flex; gap: 10px; }
+      .hero-stats { gap: 32px; }
+      .stat .num { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="#" class="brand">Tally Shea<em>.</em></a>
+    <ul class="compact-nav">
+      <li class="nav-links"><a href="#about">About</a></li>
+      <li class="nav-links"><a href="#launch">Work</a></li>
+      <li class="nav-links"><a href="#writing">Writing</a></li>
+      <li class="nav-links"><a href="#experience">Experience</a></li>
+      <li><a href="assets/tally-shea-resume.pdf" class="cta" download>Resume</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow">Product marketing · Cloud security</span>
+          <h1>Natalie <em>(Tally)</em> Shea</h1>
+          <p class="hero-sub">Product marketing execution for cloud security — messaging, launch content, demos, and enablement. 5+ years in cybersecurity &amp; B2B SaaS, most recently at Sonrai Security, currently offering PMM consulting.</p>
+          <div class="hero-stats">
+            <div class="stat">
+              <div class="num">AWS</div>
+              <div class="label">Cloud Practitioner</div>
+            </div>
+            <div class="stat">
+              <div class="num">1 demo → $1M</div>
+              <div class="label">Identity Inventory demo I authored sourced a $1M deal</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <img src="assets/headshot.png" alt="Tally Shea" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">About</span>
+        <h2>The bridge between technical and non-technical.</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm in it for the industry. The Cloud and Security space is endlessly changing, which keeps me endlessly entertained.</p>
+          <p>My hope is to be the <em>marketing resource</em> to the product people and the <em>technical resource</em> to the business people. I partner closely with the product team to understand every feature, then translate it into messaging that works across the funnel — web pages, launch content, sales decks, demos, and sales enablement.</p>
+          <p>I got my start at IBM Security leading social media strategy for the business unit. I made an intentional move into content marketing, knowing my final destination would be PMM.</p>
+        </div>
+        <aside class="facts">
+          <div class="fact"><div class="k">Focus</div><div class="v">Cloud security · Identity and access · AI</div></div>
+          <div class="fact"><div class="k">Certification</div><div class="v">AWS Cloud Practitioner</div></div>
+          <div class="fact"><div class="k">Based in</div><div class="v">Brooklyn, NY</div></div>
+          <div class="fact"><div class="k">Previously</div><div class="v">Sonrai Security · IBM Security</div></div>
+          <div class="fact"><div class="k">Toolkit</div><div class="v">Figma · Navattic · Wynter · Salesforce · SEMrush · Descript</div></div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED CASE STUDY -->
+  <section id="launch">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Featured work · Tier 1 launch</span>
+        <h2>PMM execution on a flagship launch.</h2>
+        <p>I was the PMM on the ground for Sonrai's Cloud Permissions Firewall launch. Our VP of PMM led strategy and positioning; I owned the execution — messaging drafts, launch content, demo videos, and sales enablement — and learned a tremendous amount working alongside her. What follows is the spine of the work.</p>
+      </div>
+
+      <div class="case">
+        <span class="eyebrow">Sonrai Security · 2024</span>
+        <h2>Cloud Permissions <em>Firewall</em></h2>
+        <p class="case-summary">Enterprise cloud environments are filled with overprivileged human and machine identities that, when exploited, put company data, infrastructure, and services at risk. Manual policy management doesn't scale. Sonrai's Cloud Permissions Firewall automates privilege enforcement at scale — dramatically reducing attack surface without breaking DevOps workflows.</p>
+
+        <div class="case-metrics">
+          <div class="case-metric">
+            <div class="num">10</div>
+            <div class="label">Launch assets shipped across the funnel</div>
+          </div>
+          <div class="case-metric">
+            <div class="num">+200%</div>
+            <div class="label">YoY customer growth post-launch (10 → 30)</div>
+          </div>
+          <div class="case-metric">
+            <div class="num">+300%</div>
+            <div class="label">Website traffic, first week post-launch (11% MoM sustained)</div>
+          </div>
+        </div>
+
+        <div class="phases">
+          <div class="phase">
+            <div class="step">01 · Pre-launch</div>
+            <h3>Research the market</h3>
+            <p>Mapped current cloud IAM solutions, ran ICP interviews, and pinpointed where CIEM tools were leaving enterprises with visibility but no enforcement.</p>
+            <div class="phase-links">
+              <a href="https://sonraisecurity.com/cloud-access-data-report/" target="_blank" rel="noopener">Data report: Cloud access risk</a>
+            </div>
+          </div>
+          <div class="phase">
+            <div class="step">02 · Pre-launch</div>
+            <h3>Messaging &amp; positioning</h3>
+            <p>Defined the solution summary, use cases, and aligned pain points. Workshopped messaging, wrote the web page copy, and tested it with ICP feedback tools before launch.</p>
+            <div class="phase-links">
+              <a href="https://sonraisecurity.com/cloud-security-platform/cloud-permissions-firewall/" target="_blank" rel="noopener">Product landing page</a>
+            </div>
+          </div>
+          <div class="phase">
+            <div class="step">03 · Post-launch</div>
+            <h3>Build the campaign</h3>
+            <p>Partnered with product on the launch blog, data sheet, demo video, and walkthrough. Worked with demand gen to align a digital and email campaign to the story.</p>
+            <div class="phase-links">
+              <a href="https://sonraisecurity.com/blog/announcing-cloud-permissions-firewall/" target="_blank" rel="noopener">Launch blog</a>
+              <a href="https://sonraisecurity.com/resource/get-to-know-the-cloud-permissions-firewall/" target="_blank" rel="noopener">Product walkthrough</a>
+              <a href="https://sonraisecurity.com/resource/cloud-permissions-firewall/" target="_blank" rel="noopener">Solutions data sheet</a>
+            </div>
+          </div>
+          <div class="phase">
+            <div class="step">04 · Post-launch</div>
+            <h3>Enable the field</h3>
+            <p>Led sales training, authored objection-handling FAQs, recorded pitch feedback, and built the ROI narrative to optimize deal motion.</p>
+            <div class="phase-links">
+              <a href="https://sonraisecurity.com/cloud-permissions-firewall-roi/" target="_blank" rel="noopener">ROI &amp; business case</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POSITIONING & MESSAGING -->
+  <section id="positioning">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Positioning &amp; messaging</span>
+        <h2>Distilled, then shipped.</h2>
+        <p>Positioning lives in two places — the internal artifacts that align product, sales, and marketing on what we're saying, and the customer-facing pages where buyers actually encounter it. Below: live solution pages I wrote at Sonrai, plus a recent positioning framework I built as a PMM consultant for Reveal Security.</p>
+      </div>
+      <div class="tiles">
+        <a class="tile" href="https://sonraisecurity.com/use-cases/just-in-time-access/" target="_blank" rel="noopener">
+          <div class="kind">Use case page · Sonrai</div>
+          <h3>Just-in-Time Access</h3>
+          <p>Zero standing privileges, on-demand. Positioned JIT as a cloud-native alternative to legacy PAM — approval workflows that don't break DevOps.</p>
+          <span class="arrow">Visit page →</span>
+        </a>
+        <a class="tile" href="https://www.reveal.security/platform" target="_blank" rel="noopener">
+          <div class="kind">Platform page · Reveal</div>
+          <h3>Platform page</h3>
+          <p>Reveal's platform ingests logs from the workspaces your teams use to build a behavioral baseline for each identity. As risky behavior emerges, automated actions contain the threat.</p>
+          <span class="arrow">Visit page →</span>
+        </a>
+        <a class="tile" href="https://sonraisecurity.com/use-cases/ai-agent-security/" target="_blank" rel="noopener">
+          <div class="kind">Use case page · Sonrai</div>
+          <h3>AI Agent Security</h3>
+          <p>How Sonrai's platform prevents AI workflow tampering and secures the AI agents themselves from excessive privilege risks.</p>
+          <span class="arrow">Visit page →</span>
+        </a>
+      </div>
+      <div class="screenshot-card">
+        <div class="kind">Reveal Security · PMM consulting · 2026</div>
+        <img src="assets/reveal-positioning.png" alt="Product capabilities framework I built for Reveal Security — mapping use-case columns (Continuous Behavioral Observability, Behavioral Anomaly Detection, Response Actions) to rows for Explanation, Examples, Painkillers, and Impact." />
+        <div class="caption"><strong>Product capabilities framework:</strong> Reveal brought me on as PMM consultant to revamp their messaging and positioning for insider threat &amp; AI-agent security. I owned this artifact end-to-end — embedded with the product team, learned the technical capabilities, and distilled them into a single framework that maps each use case (Continuous Behavioral Observability, Behavioral Anomaly Detection, Response Actions) to a consistent row structure (Explanation, Examples, Painkillers, Impact). Used by marketing, sales, and demand gen as the technical-but-accessible foundation for every customer conversation.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMOS -->
+  <section id="demos">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Demos</span>
+        <h2>Product demos I built.</h2>
+        <p>Short, narrative-driven product walkthroughs I scripted, produced, and used in the field.</p>
+      </div>
+      <div class="videos">
+        <div class="video-card">
+          <div class="frame yt-lite" data-yt-id="AGTos0b6DK8" role="button" tabindex="0" aria-label="Play: Stop AWS cryptomining with WALLy">
+            <img class="yt-poster" src="https://img.youtube.com/vi/AGTos0b6DK8/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/AGTos0b6DK8/hqdefault.jpg';" alt="Stop AWS cryptomining with WALLy — video thumbnail" />
+            <span class="yt-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </div>
+          <h3>Stop AWS cryptomining with WALLy</h3>
+          <p>Agentic cloud PAM demo: WALLy catches a cryptomining attempt and blocks it in real time.</p>
+        </div>
+        <div class="video-card">
+          <div class="frame yt-lite" data-yt-id="yqZwp1wGK0w" role="button" tabindex="0" aria-label="Play: Unused cloud identities">
+            <img class="yt-poster" src="assets/yt-quarantine-zombies.png" alt="Unused cloud identities — video thumbnail" />
+            <span class="yt-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </div>
+          <h3>Unused cloud identities</h3>
+          <p>Quarantining dormant "zombie" identities to reduce risk without the risk of deleting identities.</p>
+        </div>
+        <div class="video-card">
+          <div class="frame yt-lite" data-yt-id="O7emW3v_maw" role="button" tabindex="0" aria-label="Play: Excessive cloud permissions">
+            <img class="yt-poster" src="assets/yt-excessive-permissions.png" alt="Excessive cloud permissions — video thumbnail" />
+            <span class="yt-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </div>
+          <h3>Excessive cloud permissions</h3>
+          <p>Restricting unused privileges automatically — without disrupting DevOps workflows.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SALES ENABLEMENT -->
+  <section id="enablement">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Sales enablement</span>
+        <h2>The business is only as healthy as its sales team.</h2>
+        <p>A sampler of internal enablement assets I authored as Sonrai's in-house PMM — objection-handling frameworks, value-prop one-pagers, and diagnostic tools sellers actually use on calls. The job: make sure reps feel confident talking about the offering, and put what they need for customer conversations directly in their hands.</p>
+      </div>
+      <div class="screenshot-card">
+        <div class="kind">Sonrai Security · in-house PMM</div>
+        <img src="assets/page8.png" alt="Sales enablement artifacts — AWS AI services one-pager, permissions mapped to MITRE tactics, compliance pain points framework, and Cloud Identity Diagnostic value proposition." />
+        <div class="caption"><strong>Selected excerpts from internal enablement:</strong> an AWS AI services positioning one-pager, a permissions-by-MITRE-tactic reference, a compliance pain-point objection-handling table mapped to the product, and the Cloud Identity Diagnostic (CID) value-proposition framework used to qualify and shape deals.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PITCH DECK -->
+  <section id="pitch">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Pitch deck</span>
+        <h2>A first-call deck I built from scratch.</h2>
+        <p>A portfolio sample showing how I'd structure a first-call deck for a technical buyer. I used Sonrai's Cloud Permissions Firewall as the example product — a product I know inside-out from my time on the PMM team — but the structure, narrative arc, and design are mine, portable to any product.</p>
+      </div>
+      <div class="screenshot-card">
+        <div class="kind">Portfolio sample · 10 slides · PDF</div>
+        <a class="deck-cover" href="assets/cpf-first-call-deck.pdf" target="_blank" rel="noopener" aria-label="Open the full deck as a PDF">
+          <img src="assets/deck-slide-01.png" alt="First Call Deck cover — Cloud Permissions Firewall: Least privilege. Finally automated." />
+        </a>
+        <div class="deck-strip">
+          <a href="assets/cpf-first-call-deck.pdf" target="_blank" rel="noopener" aria-label="Open deck (PDF) — The Problem slide"><img src="assets/deck-slide-02.png" alt="The Problem — development velocity creates permission sprawl" /></a>
+          <a href="assets/cpf-first-call-deck.pdf" target="_blank" rel="noopener" aria-label="Open deck (PDF) — Introducing slide"><img src="assets/deck-slide-05.png" alt="Introducing Cloud Permissions Firewall" /></a>
+          <a href="assets/cpf-first-call-deck.pdf" target="_blank" rel="noopener" aria-label="Open deck (PDF) — Why Us slide"><img src="assets/deck-slide-07.png" alt="Why Us — competitive landscape" /></a>
+          <a href="assets/cpf-first-call-deck.pdf" target="_blank" rel="noopener" aria-label="Open deck (PDF) — Impact slide"><img src="assets/deck-slide-09.png" alt="Impact — what customers see after deployment" /></a>
+        </div>
+        <div class="deck-cta">
+          <a href="assets/cpf-first-call-deck.pdf" target="_blank" rel="noopener">View full deck (PDF) →</a>
+        </div>
+        <div class="caption"><strong>First-call deck · portfolio sample:</strong> 10 slides written for a technical buyer (cloud security engineer or architect) — problem framing on permission sprawl, "why now" data, what they've probably tried, the proposed solution, how it works, competitive positioning vs. CNAPP/CIEM/cloud-native/traditional PAM, value by stakeholder, customer impact, and a takeaway close. Built as a standalone artifact to show how I'd approach first-call design end-to-end.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WRITING -->
+  <section id="writing">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Long-form writing</span>
+        <h2>Selected long-form work.</h2>
+        <p>Blog posts and thought leadership ranging from technical deep-dives to POV pieces on the shape of the cloud security market. One is ghostwritten for the VP of Product Marketing — flagged below.</p>
+      </div>
+      <div class="writing-list">
+        <a class="writing-item" href="https://sonraisecurity.com/blog/theres-a-new-way-to-do-least-privilege/" target="_blank" rel="noopener">
+          <div class="num">01</div>
+          <div>
+            <h3>There's a new way to do least privilege</h3>
+            <p>Launch-anchor narrative piece. Positions automated enforcement against a decade of CIEM visibility-only tools — and argues for a category rethink.</p>
+            <div class="meta"><span class="tag">Launch narrative</span></div>
+          </div>
+          <span></span>
+        </a>
+        <a class="writing-item" href="https://sonraisecurity.com/blog/safeguarding-aws-ai-services-protecting-sensitive-permissions/" target="_blank" rel="noopener">
+          <div class="num">02</div>
+          <div>
+            <h3>Safeguarding AWS AI services: Protecting sensitive permissions</h3>
+            <p>Technical deep-dive mapping sensitive permissions across Bedrock, SageMaker, Q Business, Lex, Rekognition, Comprehend, Kendra, and Entity Resolution to MITRE tactics. Referenced by security engineers; ranks for AWS AI permissions queries.</p>
+            <div class="meta"><span class="tag">Technical</span></div>
+          </div>
+          <span></span>
+        </a>
+        <a class="writing-item" href="https://sonraisecurity.com/blog/cloud-pam-for-ai-agents-why-traditional-pam-cant-protect-agentic-workloads/" target="_blank" rel="noopener">
+          <div class="num">03</div>
+          <div>
+            <h3>Cloud PAM for AI agents: Why traditional PAM can't protect agentic workloads</h3>
+            <p>Thought leadership behind the AI Agent Security category launch. Makes the case for treating AI agents as first-class identities with cloud-native privilege controls.</p>
+            <div class="meta"><span class="tag">Category POV</span></div>
+          </div>
+          <span></span>
+        </a>
+        <a class="writing-item" href="https://sonraisecurity.com/blog/the-conversation-no-one-is-having-about-claude-mythos/" target="_blank" rel="noopener">
+          <div class="num">04</div>
+          <div>
+            <h3>The conversation no one is having about Claude mythos</h3>
+            <p>POV piece on the gap between AI-agent hype and the identity security problems nobody's pricing in. A voice-forward narrative, less product-adjacent — closer to a tech op-ed.</p>
+            <div class="meta"><span class="tag">Voice &amp; POV</span></div>
+          </div>
+          <span></span>
+        </a>
+        <a class="writing-item" href="https://sonraisecurity.com/blog/how-treating-ai-agents-as-identities-can-reduce-enterprise-ai-risk/" target="_blank" rel="noopener">
+          <div class="num">05</div>
+          <div>
+            <h3>How treating AI agents as identities can reduce enterprise AI risk</h3>
+            <p>Ghostwritten for Sonrai's VP of Product Marketing. Positioning the "identity-first" approach to AI security for an executive audience.</p>
+            <div class="meta"><span class="tag ghost">Ghostwritten · VP PMM</span></div>
+          </div>
+          <span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNICAL WRITING -->
+  <section id="technical">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Technical writing</span>
+        <h2>Reference pieces built to earn trust.</h2>
+        <p>The kind of content that security engineers forward to each other — practical, specific, and valuable without a gate.</p>
+      </div>
+      <div class="tiles">
+        <a class="tile" href="https://sonraisecurity.com/resource/5-free-scps-to-use-today/" target="_blank" rel="noopener">
+          <div class="kind">Resource</div>
+          <h3>5 Free SCPs to Use Today</h3>
+          <p>Practical, open-source-style value-give: five AWS Service Control Policies security engineers can deploy immediately — with the exact JSON and rationale.</p>
+          <span class="arrow">Visit resource →</span>
+        </a>
+        <a class="tile" href="https://sonraisecurity.com/powerful-cloud-permissions-you-should-know/" target="_blank" rel="noopener">
+          <div class="kind">Interactive reference</div>
+          <h3>Powerful Cloud Permissions You Should Know</h3>
+          <p>A reference on the highest-risk cloud permissions — by MITRE stage, with context and "so what" framing. Built for security practitioners and curious operators.</p>
+          <span class="arrow">Visit reference →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW I WORK -->
+  <section id="how">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">How I work</span>
+        <h2>Four habits that show up in every launch.</h2>
+      </div>
+      <div class="principles">
+        <div class="principle">
+          <div class="num">01</div>
+          <h3>Understand the product deeply.</h3>
+          <p>Embed with the product team. Play with the product, navigate demo environments comfortably, and become the SME for the business side of the house.</p>
+        </div>
+        <div class="principle">
+          <div class="num">02</div>
+          <h3>Siphon out the value.</h3>
+          <p>Find the real problem the offering solves and the specific value it delivers to customers. Strip the feature list until what's left is the story.</p>
+        </div>
+        <div class="principle">
+          <div class="num">03</div>
+          <h3>Empower the field.</h3>
+          <p>Communicate value clearly to marketing and sales. Build the assets they need, then arm them to spread the word in their own voice.</p>
+        </div>
+        <div class="principle">
+          <div class="num">04</div>
+          <h3>Measure. Iterate. Repeat.</h3>
+          <p>Analyze what's working in the sales process and in the funnel. Optimize the asset, the sequence, or the message — whichever is the bottleneck.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Experience</span>
+        <h2>The path here.</h2>
+      </div>
+      <div class="timeline">
+        <div class="role">
+          <div class="date">2026 — Now</div>
+          <div class="detail">
+            <h3>Marketing Consultant</h3>
+            <div class="company">Freelance — New York, NY</div>
+          </div>
+        </div>
+        <div class="role">
+          <div class="date">2023 — 2025</div>
+          <div class="detail">
+            <h3>Product Marketing Manager</h3>
+            <div class="company">Sonrai Security — New York, NY</div>
+          </div>
+        </div>
+        <div class="role">
+          <div class="date">2021 — 2022</div>
+          <div class="detail">
+            <h3>Content Marketing Manager</h3>
+            <div class="company">Sonrai Security — New York, NY</div>
+          </div>
+        </div>
+        <div class="role">
+          <div class="date">2020 — 2021</div>
+          <div class="detail">
+            <h3>Lead Social Strategist</h3>
+            <div class="company">IBM Security — Cambridge, MA</div>
+          </div>
+        </div>
+        <div class="role">
+          <div class="date">2019 — 2020</div>
+          <div class="detail">
+            <h3>Social Strategist</h3>
+            <div class="company">IBM Security — Cambridge, MA</div>
+          </div>
+        </div>
+        <div class="role">
+          <div class="date">Education</div>
+          <div class="detail">
+            <h3>B.A. Psychology</h3>
+            <div class="company">Bowdoin College — Women's Lacrosse</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-block">
+        <span class="eyebrow" style="color: var(--accent-soft);">Get in touch</span>
+        <h2>Let's talk <em>cloud security</em>.</h2>
+        <p>Currently consulting and open to full-time PMM roles at cloud-native, security, and observability companies.</p>
+        <div class="contact-links">
+          <a class="contact-btn" href="mailto:tallyshea96@gmail.com">Email</a>
+          <a class="contact-btn outline" href="https://www.linkedin.com/in/natalieshea/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="contact-btn outline" href="assets/tally-shea-resume.pdf" download>Download résumé</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">© Natalie (Tally) Shea · Brooklyn, NY · Built 2026</div>
+</footer>
+
+<script>
+  (function () {
+    function activate(el) {
+      var id = el.getAttribute('data-yt-id');
+      if (!id) return;
+      var iframe = document.createElement('iframe');
+      iframe.setAttribute('src', 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0');
+      iframe.setAttribute('title', el.getAttribute('aria-label') || 'YouTube video');
+      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+      iframe.setAttribute('allowfullscreen', '');
+      el.innerHTML = '';
+      el.appendChild(iframe);
+      el.classList.remove('yt-lite');
+    }
+    document.querySelectorAll('.yt-lite').forEach(function (el) {
+      el.addEventListener('click', function () { activate(el); });
+      el.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(el); }
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
